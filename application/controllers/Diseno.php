@@ -11,7 +11,9 @@ class Diseno extends CI_Controller {
 	public function getDiseno ()
 	{
 		$result=$this->Diseno_model->getDiseno();
-		print_r($result);
+		//print_r($result);
+		header('Content-Type: application/json');
+    	echo json_encode( $result );
 	}
 
 	public function updateDiseno ()
