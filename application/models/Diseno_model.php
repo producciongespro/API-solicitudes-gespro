@@ -16,7 +16,7 @@ public function getDiseno()
 {
    
     $this->db->select("*");    
-    $this->db->from("solicitud_diseno");    
+    $this->db->from("solicitud_diseno");        
     $query=$this->db->get();
 
     if ($query->num_rows()>0) {
