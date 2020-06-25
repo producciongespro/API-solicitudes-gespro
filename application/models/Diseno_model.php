@@ -1,12 +1,12 @@
 <?php
 
-class Gestiones_model extends CI_Model {
+class Diseno_model extends CI_Model {
 
 public function setDiseno() {
     $diseno = array(
             'idUsuario' => 1,  
-            'idProductoDiseno'=> 5, 
-            'descripcion'=> 'Prueba 852' 
+            'idProductoDiseno'=> 4, 
+            'descripcion'=> 'Prueba 3654' 
         );
 
             $this->db->insert('solicitud_diseno', $diseno);
@@ -25,6 +25,17 @@ public function getDiseno()
         return NULL;
     }    
     
+}
+
+public function updateDiseno ()
+{
+    $diseno = array(
+        'idUsuario' => 1,  
+        'idProductoDiseno'=> 4, 
+        'descripcion'=> 'UPDATED 123' 
+    );
+    $this->db->where("id",12);
+    $this->db->update('solicitud_diseno', $diseno);
 }
 
 }
