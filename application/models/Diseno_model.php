@@ -2,11 +2,11 @@
 
 class Diseno_model extends CI_Model {
 
-public function setDiseno() {
+public function setDiseno($idUsuario, $idProductoDiseno, $descripcion ) {
     $diseno = array(
-            'idUsuario' => 1,  
-            'idProductoDiseno'=> 4, 
-            'descripcion'=> 'Prueba 3654' 
+            'idUsuario' => $idUsuario,  
+            'idProductoDiseno'=> $idProductoDiseno, 
+            'descripcion'=> $descripcion 
         );
 
             $this->db->insert('solicitud_diseno', $diseno);
