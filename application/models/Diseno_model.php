@@ -15,6 +15,14 @@ public function setDiseno($idUsuario, $idProductoDiseno, $descripcion ) {
 
 }
 
+
+public function getProdDiseno () {
+    
+    $datos= $this->db->query( 'CALL GET_PRODDISENO'  );
+    return $datos;
+}
+
+
 public function getDiseno()
 {
    
