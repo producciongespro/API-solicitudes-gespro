@@ -3,13 +3,16 @@
 class Diseno_model extends CI_Model {
 
 public function setDiseno($idUsuario, $idProductoDiseno, $descripcion ) {
+    /* Esta instruccion es para consultas desde Codeinigter
     $diseno = array(
             'idUsuario' => $idUsuario,  
             'idProductoDiseno'=> $idProductoDiseno, 
             'descripcion'=> $descripcion 
         );
+        $this->db->insert('solicitud_diseno', $diseno);
+        */
+            $this->db->callFunction('INSERT_DISENO', $idUsuario, $idProductoDiseno, $descripcion);
 
-            $this->db->insert('solicitud_diseno', $diseno);
 }
 
 public function getDiseno()
